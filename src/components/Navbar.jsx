@@ -1,10 +1,22 @@
+import { SlLogin } from "react-icons/sl";
+import './Navbar.css';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    return (
-        <div>
-            <h1>📋 Task Tracker</h1>            
-        </div>
-    );
+  const isLoggedIn = localStorage.getItem('fakeToken');
+
+  return (
+    <nav>
+      <h1>📋 Task Tracker</h1>
+      {!isLoggedIn && (
+        <button>
+          <Link to="/login">
+            <SlLogin />
+          </Link>
+        </button>
+      )}
+    </nav>
+  );
 };
 
 export default Navbar;

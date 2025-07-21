@@ -25,7 +25,7 @@ h2 {
 }
 
 
-label{
+label {
   font-weight: 500;
 }
 
@@ -37,6 +37,17 @@ label{
   border-radius: 6px;
   font-size: 1rem;
 }
+
+
+.task-form {
+  display: grid;
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
 
 
 .radio-group {
@@ -84,6 +95,7 @@ input[type="submit"] {
   cursor: pointer;
   transition: background 0.3s;
 }
+
 input[type="submit"]:hover {
   background: #388e3c;
 }

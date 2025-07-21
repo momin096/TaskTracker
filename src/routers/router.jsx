@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../Pages/Home";
 import AddTask from "../Pages/AddTask";
 import MainLayout from "../layout/MainLayout";
-import App from "../App";
+import Login from "../Pages/Login";
 
 
 
@@ -21,9 +21,10 @@ const router = createBrowserRouter([
                 element: <AddTask />
             },
             {
-                path: '/app',
-                element: <App/>
-            }
+                path: '/login',
+                element: <Login />
+            },
+            
         ]
     },
 
