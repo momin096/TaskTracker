@@ -12,7 +12,7 @@ const AddTask = ({ setShow }) => {
         const date = form.date.value;
         const status = form.status.value;
         const priority = form.priority.value;
-        const email = localStorage.getItem('fakeToken'); // Get email from localStorage
+        const email = localStorage.getItem('userEmail'); // Get email from localStorage
 
         const task = {
             title,
@@ -23,7 +23,7 @@ const AddTask = ({ setShow }) => {
             email, // Add user email
         };
 
-        const { data } = await axios.post('http://localhost:5000/task', task);
+        const { data } = await axios.post('https://server-sigma-mocha.vercel.app/task', task);
         console.log(data);
         if (data.insertedId) {
             toast.success('Added')

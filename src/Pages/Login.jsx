@@ -18,7 +18,7 @@ const Login = () => {
         }
 
         try {
-            await axios.post(`http://localhost:5000/users/${email}`);
+            await axios.post(`https://server-sigma-mocha.vercel.app/users/${email}`);
 
             // Store fake token and email
             localStorage.setItem('fakeToken', 'token_123456');

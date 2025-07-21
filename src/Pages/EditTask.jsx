@@ -10,7 +10,7 @@ const EditTask = () => {
     const [task, setTask] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/task/${id}`)
+        axios.get(`https://server-sigma-mocha.vercel.app/task/${id}`)
             .then(res => setTask(res.data))
             .catch(() => toast.error("Failed to fetch task"));
     }, [id]);
@@ -26,7 +26,7 @@ const EditTask = () => {
             priority: form.priority.value
         };
 
-        const { data } = await axios.patch(`http://localhost:5000/task/${id}`, updatedTask);
+        const { data } = await axios.patch(`https://server-sigma-mocha.vercel.app/task/${id}`, updatedTask);
         if (data.modifiedCount > 0) {
             toast.success("Task updated successfully");
             navigate('/');

@@ -7,10 +7,10 @@ import { Link } from "react-router-dom";
 
 const AllTasks = () => {
     const [tasks, setTasks] = useState([]);
-    const email = localStorage.getItem('fakeToken');
+    const email = localStorage.getItem('userEmail');
 
     const fetchTasks = async () => {
-        const { data } = await axios.get(`http://localhost:5000/tasks?email=${email}`);
+        const { data } = await axios.get(`https://server-sigma-mocha.vercel.app/tasks?email=${email}`);
         setTasks(data);
     };
 
@@ -21,9 +21,9 @@ const AllTasks = () => {
     const handleDelete = async (id) => {
         const confirm = window.confirm("Are you sure you want to delete this task?");
         if (!confirm) return;
-        
 
-        const { data } = await axios.delete(`http://localhost:5000/task/${id}`);
+
+        const { data } = await axios.delete(`https://server-sigma-mocha.vercel.app/task/${id}`);
         if (data.deletedCount > 0) {
             toast.success("Task deleted successfully");
             fetchTasks();
