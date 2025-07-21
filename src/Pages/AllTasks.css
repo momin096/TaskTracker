@@ -118,6 +118,7 @@
 
 .edit-btn {
     background-color: #494cf7;
+    text-decoration: none;
 }
 
 .edit-btn:hover {

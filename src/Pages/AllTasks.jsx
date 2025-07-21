@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import './AllTasks.css';
+import { Link } from "react-router-dom";
+
 
 const AllTasks = () => {
     const [tasks, setTasks] = useState([]);
@@ -19,6 +21,7 @@ const AllTasks = () => {
     const handleDelete = async (id) => {
         const confirm = window.confirm("Are you sure you want to delete this task?");
         if (!confirm) return;
+        
 
         const { data } = await axios.delete(`http://localhost:5000/task/${id}`);
         if (data.deletedCount > 0) {
@@ -53,7 +56,9 @@ const AllTasks = () => {
                                     Delete
                                 </button>
                                 <button className="btn edit-btn">
-                                    Edit
+                                    <Link to={`/edit/${task._id}`}>
+                                        Edit
+                                    </Link>
                                 </button>
                             </div>
                         </div>

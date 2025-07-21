@@ -3,6 +3,7 @@ import Home from "../Pages/Home";
 import AddTask from "../Pages/AddTask";
 import MainLayout from "../layout/MainLayout";
 import Login from "../Pages/Login";
+import EditTask from "../Pages/EditTask";
 
 
 
@@ -16,15 +17,17 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <Home />
             },
-            {
-                path: '/add-task',
-                element: <AddTask />
-            },
+
             {
                 path: '/login',
                 element: <Login />
             },
-            
+            {
+                path: '/edit/:id',
+                element: <EditTask />,
+                loader: () => fetch(``)
+            },
+
         ]
     },
 

@@ -7,7 +7,9 @@ const Navbar = () => {
 
   return (
     <nav>
-      <h1>📋 Task Tracker</h1>
+      <Link to={'/'}>
+        <h1>📋 Task Tracker</h1>
+      </Link>
       {!isLoggedIn && (
         <button>
           <Link to="/login">
