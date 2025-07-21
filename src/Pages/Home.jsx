@@ -3,6 +3,7 @@ import AddTask from './AddTask';
 import { IoIosAddCircleOutline } from "react-icons/io";
 import './Home.css'
 import { useState } from 'react';
+import AllTasks from './AllTasks';
 
 const Home = () => {
     const [show, setShow] = useState(false);
@@ -18,6 +19,8 @@ const Home = () => {
             </button>
 
             {show && <AddTask setShow={setShow} />}
+
+            <AllTasks />
         </div>
     );
 };

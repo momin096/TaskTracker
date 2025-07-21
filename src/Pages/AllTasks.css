@@ -1,0 +1,125 @@
+.all-tasks-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.tasks-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4f46e5;
+}
+
+.no-tasks-msg {
+    text-align: center;
+    color: #666;
+}
+
+.tasks-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.task-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.task-card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.task-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.task-desc {
+    margin-top: 10px;
+    color: #555;
+}
+
+.task-meta {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.status {
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.status.completed {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.status.pending {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.priority.high {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.priority.medium {
+    background-color: #dbeafe;
+    color: #1e3a8a;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.priority.low {
+    background-color: #e5e7eb;
+    color: #374151;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.task-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete-btn {
+    background-color: #fc4747;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626;
+}
+
+.edit-btn {
+    background-color: #494cf7;
+}
+
+.edit-btn:hover {
+    background-color: #4f46e5;
+}
